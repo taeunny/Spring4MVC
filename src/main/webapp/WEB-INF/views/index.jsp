@@ -2,4 +2,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 
-<main></main>
+<main>
+    <img src="/assets/img/loopy.jpg"/>
+</main>
