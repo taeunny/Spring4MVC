@@ -67,6 +67,11 @@ public class MemberController {
     @RequestMapping("/member/myinfo")
     public String myinfo(Model m , HttpSession sess) {
         logger.info("member/myinfo 호출!");
+
+        // 세션객체가 없을 경우 로그인 페이지로 이동
+        if(sess.getAttribute("member") ==null)
+            return "redirect:/member/login";
+
         String userid =
                 ((Member)sess.getAttribute("member")).getUserid();      // 다운캐스팅
 
@@ -74,5 +79,12 @@ public class MemberController {
 
         return "member/myinfo.tiles";
     }
+    @RequestMapping("/member/logout")
+    public String logout(Model m , HttpSession sess) {
+        logger.info("member/logout 호출!");
 
+        sess.invalidate();      // 세션 객체 제거
+
+        return "redirect:/";
+    }
 }
