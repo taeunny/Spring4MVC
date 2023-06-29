@@ -17,7 +17,7 @@ public class MemberServiceImpl implements MemberService {
 
         if(mdao.insertMember(m) > 0) isSaved = true;
 
-        return false;
+        return isSaved;
     }
 
 }

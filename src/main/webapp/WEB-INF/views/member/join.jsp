@@ -7,9 +7,9 @@
         <div><label for="userid">아이디</label>
             <input type="text" name="userid" id="userid"></div>
         <div><label for="passwd">비밀번호</label>
-            <input type="text" name="passwd" id="passwd"></div>
+            <input type="password" name="passwd" id="passwd"></div>
         <div><label for="repwd">비밀번호 확인</label>
-            <input type="text" name="repwd" id="repwd"></div>
+            <input type="password" name="repwd" id="repwd"></div>
         <div><label for="name">이름</label>
             <input type="name" name="name" id="name"></div>
         <div><label for="email">이메일</label>
