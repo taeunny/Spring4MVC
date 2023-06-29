@@ -12,6 +12,7 @@ import taeeun.hello.spring4.model.Member;
 import taeeun.hello.spring4.service.MemberService;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration({"classpath:spring/servlet-context.xml",
@@ -42,5 +43,12 @@ public class MemberServiceUnitTest {
         // assertEquals(테스트 메서드, 검증값)
         assertEquals(msrv.loginMember(m),true);
 
+    }
+
+    @Test
+    public void readOneMember() throws Exception {
+        String userid = "abc123";
+
+        assertNotNull(msrv.readOneMember(userid));
     }
 }
