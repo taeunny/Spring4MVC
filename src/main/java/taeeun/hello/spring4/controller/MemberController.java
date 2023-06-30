@@ -87,4 +87,11 @@ public class MemberController {
 
         return "redirect:/";
     }
+    @RequestMapping("/member/loginfail")
+    public String loginfail() {
+        logger.info("member/loginfail 호출!");
+
+        return "member/loginfail.tiles";
+    }
+
 }
