@@ -38,11 +38,18 @@ public class BoardDAOUnitTest {
 
     @Test
     public void selectOneBoard() throws Exception {
-        String bno = "450";
+        String bno = "200";
         Board result = bdao.selectOneBoard(bno);
 
         assertNotNull(result);
         System.out.println(result);
     }
+    @Test
+    @Transactional
+    public void insertBoard() throws Exception {
+        Board bd = new Board(null, "테스트","abc123",
+                            null, null, "냉무");
 
+        assertEquals(bdao.insertBoard(bd),1);
+    }
 }
