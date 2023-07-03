@@ -1,15 +1,15 @@
 package taeeun.hello.spring4.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
+
+import java.util.List;
 
 @Setter
 @Getter
 @AllArgsConstructor
+@NoArgsConstructor
 @ToString
-public class Board {
+public class Board  {
 
     private String bno;
     private String title;
